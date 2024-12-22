@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YoutubeVideoDetail">
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvCategorie"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="20sp"
+        android:textSize="17sp"/>
+    <TextView
+        android:id="@+id/tvCategorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categorie"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        app:layout_constraintBottom_toTopOf="@id/tvUrl"
+        android:textSize="17sp"/>
+    <TextView
+        android:id="@+id/tvUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Url"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCategorie"
+       android:layout_marginTop="20sp"
+        android:textSize="17sp"/>
+
+    <ImageButton
+        android:id="@+id/btnFavoris"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintTop_toBottomOf="@id/tvUrl"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toEndOf="@id/btnPlay"
+        android:layout_marginTop="30dp"/>
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="100px"
+        android:layout_height="100px"
+
+        android:src="@drawable/ic_play"
+        app:layout_constraintTop_toBottomOf="@id/tvUrl"
+        app:layout_constraintEnd_toStartOf="@id/btnFavoris"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
